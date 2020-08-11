@@ -66,7 +66,6 @@ http.listen(3000, () => {
 //REAL TIME APP TRY CODE
 ///////////////////////////////////////////////////////////////////////////////////
 
-
 const express = require ("express");
 const http = require("http");
 const socketIo = require("socket.io");
@@ -99,3 +98,36 @@ io.on("connection", socket => {
 });
 
 server.listen(port, () => console.log('Listening on port ${port}'));
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+//NOT RELATED TO THE PROJECT < JUST FOR TESTING
+///////////////////////////////////////////////////////////////////////////////////
+//Testing JSMODBUS
+// create a tcp modbus client
+/* const Modbus = require('jsmodbus');
+const net = require('net');
+const soscket = new net.Socket()
+const client = new Modbus.client.TCP(soscket)
+const options = {
+'host' : '192.168.104.213',
+'port' : 7727
+}
+
+//js modbus
+soscket.on("connect", function(){
+  client.readHoldingRegisters(40,1)
+      .then(function(data){
+        //this.setState({moddata:data.response.body})de
+        console.log(data.response.body.values);
+        soscket.end();
+      }) 
+      .catch(function(err){s
+        console.log(err);
+        soscket.end();
+      });
+});
+
+soscket.on('error', console.error)
+soscket.connect(options) */
