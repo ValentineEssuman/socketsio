@@ -4,7 +4,7 @@
     "description": "my first socket.io app",
     "dependencies": {
         "@routes/index": "^1.2.0",
-        "axios": "^0.19.2",
+        "axios": "^0.21.1",
         "express": "^4.17.1",
         "jsmodbus": "^4.0.4",
         "mocha": "^8.1.1",
